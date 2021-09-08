@@ -8,16 +8,19 @@ public class TankAnimation : MonoBehaviour
     private Vector3 movementDirection;
     private float horizontalInput;
     private float verticalInput;
+    private bool player2;
 
 
     // Start is called before the first frame update
-
-
+    private void Start()
+    {
+        player2 = (transform.parent.name == "PlayerTwo");
+    }
     // Update is called once per frame
     private void FixedUpdate()
     { 
-        
-        if (transform.parent.name == "PlayerTwo")
+        //todo : make this not dependent on the name
+        if (player2)
         {
             horizontalInput = Input.GetAxis("Horizontal2");
             verticalInput = Input.GetAxis("Vertical2");        

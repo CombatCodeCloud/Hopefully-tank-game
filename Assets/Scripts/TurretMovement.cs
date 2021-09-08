@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class TurretMovement : MonoBehaviour
 {
+    private bool player2;
     // Update is called once per frame
+
+    private void Start()
+    {
+        player2 = (transform.parent.name == "PlayerTwo");
+    }
     void Update()
     {
         
@@ -12,9 +18,19 @@ public class TurretMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.LeftControl))
+        if (player2)
         {
-            transform.Rotate(0, 0, 2 * Time.deltaTime * 100);
+            if (Input.GetKey(KeyCode.RightShift))
+            {
+                transform.Rotate(0, 0, 2 * Time.deltaTime * 100);
+            }
+        }
+        else
+        {
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                transform.Rotate(0, 0, 2 * Time.deltaTime * 100);
+            }
         }
     }
 }

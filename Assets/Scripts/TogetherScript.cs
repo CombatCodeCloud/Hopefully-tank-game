@@ -8,11 +8,11 @@ public class TogetherScript : MonoBehaviour
     private Vector3 movementDirection;
     private float horizontalInput;
     private float verticalInput;
-    public bool player2 = false;
+    private bool player2;
 
     void Start()
     {
-        Application.targetFrameRate = 60;
+        player2 = (transform.name == "PlayerTwo"); //dude you gotta fix having to do this for every script
     }
 
     /*
@@ -109,7 +109,6 @@ public class TogetherScript : MonoBehaviour
             speed = 2;
         }
         */
-        Debug.Log(player2);
     }
 
     public void FixedUpdate() {
