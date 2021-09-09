@@ -504,6 +504,7 @@ GameObject:
   - component: {fileID: 1873756870}
   - component: {fileID: 1873756869}
   - component: {fileID: 1873756868}
+  - component: {fileID: 1873756871}
   m_Layer: 0
   m_Name: PlayerTwo
   m_TagString: Respawn
@@ -545,6 +546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  player2: 0
 --- !u!4 &1873756870
 Transform:
   m_ObjectHideFlags: 0
@@ -561,6 +563,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1873756871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873756867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7e390d2067e9db4d9b7a6f4900f9142, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1906428860
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,6 +586,7 @@ GameObject:
   - component: {fileID: 1906428861}
   - component: {fileID: 1906428862}
   - component: {fileID: 1906428863}
+  - component: {fileID: 1906428864}
   m_Layer: 0
   m_Name: PlayerOne
   m_TagString: Respawn
@@ -608,6 +623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  player2: 0
 --- !u!50 &1906428863
 Rigidbody2D:
   serializedVersion: 4
@@ -629,6 +645,18 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1906428864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906428860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7e390d2067e9db4d9b7a6f4900f9142, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2010198967
 GameObject:
   m_ObjectHideFlags: 0

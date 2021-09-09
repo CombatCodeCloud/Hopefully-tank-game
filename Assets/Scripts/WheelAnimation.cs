@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TankAnimation : MonoBehaviour
+public class WheelAnimation : MonoBehaviour
 {
     public float rotationSpeed = 720;
     private Vector3 movementDirection;
