@@ -6,14 +6,14 @@ public class TurretMovement : MonoBehaviour
 {
     Player playerScript;
 
-    // Update is called once per frame
-
+    // Start is called before the first frame update
     private void Start()
     {
         GameObject player = (this.transform.parent.gameObject);
         playerScript = player.GetComponent<Player>();
-        Debug.Log(playerScript.player2);
     }
+
+    // Update is called once per frame
     void Update()
     {
         
@@ -21,7 +21,7 @@ public class TurretMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (playerScript.player2)
+        if (playerScript.playerNumber == 2)
         {
             if (Input.GetKey(KeyCode.RightShift))
             {
