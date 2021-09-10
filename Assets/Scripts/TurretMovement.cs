@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class TurretMovement : MonoBehaviour
 {
-    private bool player2;
+    Player playerScript;
+
     // Update is called once per frame
 
     private void Start()
     {
-        player2 = (transform.parent.name == "PlayerTwo");
+        GameObject player = (this.transform.parent.gameObject);
+        playerScript = player.GetComponent<Player>();
+        Debug.Log(playerScript.player2);
     }
     void Update()
     {
@@ -18,7 +21,7 @@ public class TurretMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (player2)
+        if (playerScript.player2)
         {
             if (Input.GetKey(KeyCode.RightShift))
             {

@@ -13,7 +13,7 @@ public class TankMovement : MonoBehaviour
     void Start()
     { 
         //GameObject playerTwo = GameObject.Find("PlayerTwo"); dont use this, this only for future reference.
-        GameObject player = (this.transform.parent.gameObject);
+        GameObject player = (this.transform.gameObject);
         playerScript = player.GetComponent<Player>();
         Debug.Log(playerScript.player2);
 
@@ -25,7 +25,7 @@ public class TankMovement : MonoBehaviour
         Debug.Log(playerScript.player2);
     }
 
-    public void FixedUpdate()
+    private void FixedUpdate()
     {
         int speed;
         speed = 2;
