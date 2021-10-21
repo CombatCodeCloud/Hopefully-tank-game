@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class TurretMovement : MonoBehaviour
 {
-    Player playerScript;
+    private Player player;
+    private GameObject playerObject;
 
     // Start is called before the first frame update
     private void Start()
     {
-        GameObject player = (this.transform.parent.gameObject);
-        playerScript = player.GetComponent<Player>();
+        playerObject = (this.transform.parent.gameObject);
+        player = playerObject.GetComponent<Player>();
     }
 
     // Update is called once per frame
@@ -21,9 +22,9 @@ public class TurretMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (playerScript.playerNumber == 2)
+        if (player.playerNumber == 2)
         {
-            if (Input.GetKey(KeyCode.RightShift))
+            if (Input.GetKey (KeyCode.RightShift))
             {
                 transform.Rotate(0, 0, 2 * Time.deltaTime * 100);
             }

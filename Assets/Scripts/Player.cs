@@ -43,7 +43,12 @@ public class Player : MonoBehaviour
         */
     }
 
-    
+    private void FixedUpdate()
+    {
+        //update iterator code here instead of other script cause its used a lot
+    }
+
+
     public Vector3 getMovementDirection()
     {
         //work here, yuh works, do this with other things

@@ -7,6 +7,7 @@ public class BulletSPScript : MonoBehaviour
     // Start is called before the first frame update
     private GameObject sourceBullet;
     private List<GameObject> bullet;
+
     private float bulletSpeed = 0.1f;
     private int updateIterator = 0;
     
@@ -45,13 +46,9 @@ public class BulletSPScript : MonoBehaviour
                         Destroy(b); // make null/destroy if not in bounds
                     }
                 }
-
-                while (bullet.Remove(null))
-                {
-                }
-                //constantly remove null AKA destroyed gameObjects from list
-                //todo : Check if this is actually removing null objects
+                Debug.Log(bullet.Count);
             }
+            bullet.RemoveAll(b => b == null); //remove null/destroyed gameObjects from list
         }
     }
 }

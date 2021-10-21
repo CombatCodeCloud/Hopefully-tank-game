@@ -4,27 +4,28 @@ using UnityEngine;
 
 public class TankMovement : MonoBehaviour
 {
-    Player playerScript;
+    private Player player;
+    private GameObject playerObject;
 
     // Start is called before the first frame update
     void Start()
     { 
         //GameObject playerTwo = GameObject.Find("PlayerTwo"); dont use this, this only for future reference.
-        GameObject player = (this.transform.gameObject);
-        playerScript = player.GetComponent<Player>();
+        playerObject = (this.transform.gameObject);
+        player = playerObject.GetComponent<Player>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(playerScript.player2);
+        //Debug.Log(player.player2);
     }
 
     private void FixedUpdate()
     {
-        float speed = playerScript.speed;
+        float speed = player.speed;
 
-        Vector3 movementDirection = playerScript.getMovementDirection();
+        Vector3 movementDirection = player.getMovementDirection();
         transform.Translate(movementDirection * speed * Time.deltaTime, Space.World);
     }
 }

@@ -258,6 +258,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 900664921}
+  - component: {fileID: 900664922}
   m_Layer: 0
   m_Name: BulletSpawnPoint
   m_TagString: Untagged
@@ -279,6 +280,18 @@ Transform:
   m_Father: {fileID: 2010198968}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &900664922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900664920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4675ed74f5cbbb7468c4fd217b14fd44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1235850438
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,6 +402,10 @@ PrefabInstance:
     - target: {fileID: 4424699759185409837, guid: 5a3070dcd8280fe46a8980397f4a0cd6, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424699759185409837, guid: 5a3070dcd8280fe46a8980397f4a0cd6, type: 3}
+      propertyPath: m_TagString
+      value: Damage
       objectReference: {fileID: 0}
     - target: {fileID: 5692106066387937239, guid: 5a3070dcd8280fe46a8980397f4a0cd6, type: 3}
       propertyPath: m_RootOrder
